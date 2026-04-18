@@ -7,23 +7,23 @@ def build_extraction_prompt(chunk_text: str) -> str:
     return """Extract structured knowledge from the passage below.
 
 Return valid JSON with this shape:
-{
+{{
   "entities": [
-    {
+    {{
       "name": "canonical display name",
       "kind": "PERSON | TEAM | SYSTEM | PRODUCT | ORGANIZATION | DATASET | CONCEPT | EVENT | LOCATION",
       "summary": "short factual summary grounded in the passage"
-    }
+    }}
   ],
   "relationships": [
-    {
+    {{
       "source": "entity name",
       "target": "entity name",
       "kind": "OWNS | DEPENDS_ON | REPORTS_TO | BUILDS | OPERATES | USES | SUPPORTS | LOCATED_IN | RELATED_TO",
       "summary": "short factual description grounded in the passage"
-    }
+    }}
   ]
-}
+}}
 
 Rules:
 - Keep summaries factual and concise.
