@@ -57,7 +57,7 @@ ollama pull llama3.2
 Install the package in editable mode:
 
 ```bash
-git clone https://github.com/PavanSai-Rayalla/knowledge_graph_rag.git
+git clone https://github.com/PSR94/knowledge_graph_rag.git
 cd knowledge_graph_rag
 python3 -m venv .venv
 source .venv/bin/activate
